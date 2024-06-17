@@ -21,6 +21,7 @@ header{
     background-color: rgba(255, 255, 255, 0.23); /* Fondo blanco con 70% de opacidad */
     backdrop-filter: blur(3px); /* Aplica un desenfoque de 8px al fondo */
     padding: 20px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.377);
     position: relative;
     z-index: 1;
 }
@@ -74,6 +75,60 @@ header{
     margin-right: 5px;
 }
 
+.intBox{
+    position: relative;
+    margin: auto;
+    border: 2px solid rgb(224, 224, 224,0.5);
+    background-color: rgba(255, 255, 255, 0.23);
+    backdrop-filter: blur(3px);
+    width: 95%;
+    height: 500px;
+    z-index: 1;
+    border-radius: 5px;
+    border: 1px solid rgb(224, 224, 224,0.5);
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.377);
+}
+
+.list{
+    height: 75vh;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.wellcome{
+    background-color: rgba(181, 215, 245, 0.592);
+    padding: 15px;
+}
+
+ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+ul li{
+    display: flex;
+    flex: 1;
+    border: 2px solid black;
+    padding: 20px;
+    border-radius: 5px;
+    margin: 5px;
+    border: 1px solid rgb(224, 224, 224,0.7);
+    cursor: pointer;
+    transition: background-color 0.9s ease;
+}
+
+li:hover{
+    background-color: rgba(240, 248, 255, 0.511);
+}
+
+li:focus{
+    border-color: #4CAF50; /* Cambia el color del borde al recibir el foco */
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+}
+
 .black {
     position: absolute; /* Absoluto para cubrir toda la pantalla */
     top: 0;
@@ -84,10 +139,3 @@ header{
     opacity: 0.15;
 }
 
-.intbox{
-    background-color: beige;
-    width: 250px;
-    height: auto;
-    border: 2px solid #000;
-
-}
