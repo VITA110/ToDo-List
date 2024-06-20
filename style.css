@@ -105,8 +105,8 @@ header{
 }
 
 input[type="text"]{
-    width: 85vw;
-    background-color: rgba(255, 255, 255, 0.5);
+    width: 80vw;
+    background-color: rgba(255, 255, 255, 0.4);
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
     backdrop-filter: blur(100px);
     border-bottom: 1px solid black;
@@ -114,6 +114,8 @@ input[type="text"]{
     font-size: 15px;
     border-radius: 5px;
     padding: 10px;
+    font-weight: bold;
+    font-family:  sans-serif;
     z-index: 1;
     transition: background-color 0.9s ease;
 }
@@ -176,11 +178,18 @@ li:focus{
 }
 
 #do{
-    cursor: pointer;
     margin-left: auto;
     width: 5%;
     background-color: #cedff4;
     opacity: 0.5;
+}
+
+#do:hover{
+    color: #000;
+    cursor: pointer;
+}
+
+#do:checked{
 }
 
 .headerList{
