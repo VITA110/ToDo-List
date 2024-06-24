@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Incluir estilos de Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Incluir el script de Bootstrap JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/72c57eba88.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
@@ -12,30 +19,53 @@
         <div class="presentacion">
             <p>LisToDo</p>
         </div>
-        <div class="filter">
-            <i class="fa-solid fa-filter"></i>
-        </div>
+        
+            <div class="dropdown">
+                <button id="drop" class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  DropdownBT
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </div>
     </header>
+    <div class="contentBox">
         <div class="intBox">
             <div class="list">
                 <div class="headerList">
                     <p class="wellcome">¡Buenos dias! 'Usuario' </p>
-                    <div class="dateContainer" id="dateContainer"><script src="script.js"></script></div>
+                    <div class="dateContainer" id="dateContainer"><script src="fecha.js"></script></div>
                 </div>
-                <ul class="scrollist">
-                    <li> <input type="text" name="item" id="item"> <input type="checkbox" name="do" id="do" class="check"> </li>
-                    <li> <input type="text" name="item" id="item"> <input type="checkbox" name="do" id="do"> </li>
-                    <li> <input type="text" name="item" id="item"> <input type="checkbox" name="do" id="do"> </li>
-                    <li> <input type="text" name="item" id="item"> <input type="checkbox" name="do" id="do"> </li>
-                    <li> <input type="text" name="item" id="item"> <input type="checkbox" name="do" id="do"> </li>
-                    <li> <input type="text" name="item" id="item"> <input type="checkbox" name="do" id="do"> </li>
-                    <li> <input type="text" name="item" id="item"> <input type="checkbox" name="do" id="do"> </li>
-                    <li> <input type="text" name="item" id="item"> <input type="checkbox" name="do" id="do"> </li>
-                    <li> <input type="text" name="item" id="item"> <input type="checkbox" name="do" id="do"> </li>
-                    <li> <input type="text" name="item" id="item"> <input type="checkbox" name="do" id="do"> </li>
+                <ul class="scrollist" id="pending-tasks">
+                    <li> <input type="text" name="item" id="item"> <button onclick="markAsDone(this)" type="button" class="btn btn-success">Hecho</button> </li>
+                    <li> <input type="text" name="item" id="item"> <button onclick="markAsDone(this)" type="button" class="btn btn-success">Hecho</button> </li>
+                    <li> <input type="text" name="item" id="item"> <button onclick="markAsDone(this)" type="button" class="btn btn-success">Hecho</button> </li>
+                    <li> <input type="text" name="item" id="item"> <button onclick="markAsDone(this)" type="button" class="btn btn-success">Hecho</button> </li>
+                    <li> <input type="text" name="item" id="item"> <button onclick="markAsDone(this)" type="button" class="btn btn-success">Hecho</button> </li>
+                    <li> <input type="text" name="item" id="item"> <button onclick="markAsDone(this)" type="button" class="btn btn-success">Hecho</button> </li>
+                    <li> <input type="text" name="item" id="item"> <button onclick="markAsDone(this)" type="button" class="btn btn-success">Hecho</button> </li>
+                    <li> <input type="text" name="item" id="item"> <button onclick="markAsDone(this)" type="button" class="btn btn-success">Hecho</button> </li>
+                    <li> <input type="text" name="item" id="item"> <button onclick="markAsDone(this)" type="button" class="btn btn-success">Hecho</button> </li>
+                    <li> <input type="text" name="item" id="item"> <button onclick="markAsDone(this)" type="button" class="btn btn-success">Hecho</button> </li>
                 </ul>
             </div>
         </div>
+        <div class="doneBox">
+            <div class="doneHeader">
+                <p id="Hdone">Done</p>
+                <div class="donelist">
+                    <ul class="scrollist">
+                        <ul id="done-tasks" class="task-list">
+                            
+                        </ul>
+                        <script src="todo.js"></script>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
     <footer>
         <div class="contact">
 
